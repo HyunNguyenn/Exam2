@@ -1,0 +1,161 @@
+CREATE TABLE Khach_Hang (
+    MAKH VARCHAR2(10)          PRIMARY KEY,
+    HOTEN VARCHAR2(50),
+    DIACHI VARCHAR2(100),
+    SODIENTHOAI VARCHAR2(20),
+    EMAIL VARCHAR2(50),
+    PHANLOAI VARCHAR2(50)
+);
+CREATE TABLE Tiet_Kiem (
+    MASO VARCHAR2(10)       PRIMARY KEY,
+    MAKH VARCHAR2(10)       NOT NULL,
+    NOI_GUI VARCHAR2(10)    NOT NULL,
+    SOTIEN NUMBER(20, 2)    NOT NULL,
+    KYHAN VARCHAR2(10)      NOT NULL,
+    NGAYGUI DATE            NOT NULL,
+    NGAYRUT DATE,
+    SOTIENNHAN NUMBER(20, 2)
+);
+CREATE TABLE Chi_Nhanh (
+    MA_CN VARCHAR2(10) PRIMARY KEY,
+    TEN_CN VARCHAR2(50),
+    PHUTRACH VARCHAR2(50)
+);
+
+CREATE TABLE Ky_Han (
+    MA VARCHAR2(10) PRIMARY KEY,
+    KYHAN VARCHAR2(50) NOT NULL,
+    LAISUAT NUMBER(4,2) NOT NULL,
+    CHUKY VARCHAR2(10) NOT NULL
+);
+
+INSERT INTO Khach_Hang VALUES ('KH01', 'Trần Văn Tùng', '34 Hàng Bạc - Hoàn Kiếm - Hà Nội', '0913536674', 'tungtv@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH02', 'Nguyễn Thanh Tuấn', '101 Đại Cồ Việt - Hai Bà - Hà Nội', '01692016017', 'nttuan@yahoo.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH03', 'Phạm Thế Anh', 'Cổ Loa - Đông Anh - Hà Nội', '01226930001', 'anhthe80@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH04', 'Nguyễn Thị Phương Trà', '223 Bạch Mai - Hai Bà - Hà Nội', '0909123668', 'phuongtra_matnai@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH05', 'Lê Nhất Hoàng Giang', '469 Giải Phóng - Hoàng Mai - Hà Nội', '0934691616', 'nhatgiang_n1@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH06', 'Hoàng Diệu Linh', '38  Phố Huế - Hai Bà - Hà Nội', '0913536666', 'hnl_daigia@yahoo.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH07', 'Phan Đăng Trúc', '115 Nguyễn Trãi - Thanh Xuân - Hà Nội', '01231584158', 'phandangtruc@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH08', 'Hồ Hải Hậu', 'Phù Lỗ - Đông Anh - Hà Nội', '01229022001', 'bonghongxanh@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH09', 'Phạm Mạnh Hoàn', '195  Bạch Mai - Hai Bà - Hà Nội', '0901023668', 'hoanmp102@yahoo.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH10', 'Ngô Trúc Quân', '501 Giải Phóng - Hoàng Mai - Hà Nội', '0933344416', 'ngotrucquan.gp@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH11', 'Nguyễn Hữu Mạnh', '275 Phố Huế - Hai Bà - Hà Nội', '0913536618', 'manh 1248@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH12', 'Hoàng Mạnh Khang', '195 Mai Hắc Đế- Hai Bà - Hà Nội', '0913246789', 'khangmanhhoang@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH13', 'Lâm Minh Nhật', '101 Hàng Bài - HoànKiếm - Hà Nội', '0978787868', 'lam_japan@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH14', 'Hoàng Mạnh Khang', '195 Mai Hắc Đế- Hai Bà - Hà Nội', '0913246789', 'khangmanhhoang@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH15', 'Trương Mạnh Hùng', '19  Tôn Đức Thắng - Đống Đa - Hà Nội', '0908343566', 'truongmanh.hung@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH16', 'Nguyễn Tất Bình', '27 Lãn Ông - Hoàn Kiếm - Hà Nội', '0909001122', 'binhnt@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH17', 'Trần Giáng Hương', '54 Chùa Bộc - Đống Đa - Hà Nội', '01240001369', 'huong.tran.giang@yahoo.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH18', 'Nguyễn Minh Thông', '122 Đội Cấn - Ba Đình - Hà Nội', '0913572266', 'thongminh102@gmail.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH19', 'Hoàng Văn Đạt', 'P2501 - T10 Times City - Hai Bà - Hà Nội', '094321234', 'hoangvandat.timescity@gmailcom', NULL);
+INSERT INTO Khach_Hang VALUES ('KH20', 'Nguyễn Trọng Quang', '91 Hàng Buồm - Hoàn Kiếm - Hà Nội', '0983691618', 'quang.fox@gmail.com', NULL);
+
+INSERT INTO Tiet_Kiem VALUES ('S01', 'KH01', 'CN02', 1050000000, 'TK0', TO_DATE('10/10/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S02', 'KH02', 'CN02', 850000000, 'TK1', TO_DATE('10/11/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S03', 'KH03', 'CN01', 1350000000, 'TK3', TO_DATE('10/12/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S04', 'KH04', 'CN02', 670000000, 'TK6', TO_DATE('10/13/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S05', 'KH05', 'CN03', 1210000000, 'TK3', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S06', 'KH06', 'CN04', 3010000000, 'TK6', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S07', 'KH15', 'CN05', 2420000000, 'TK12', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S08', 'KH16', 'CN02', 400000000, 'TK24', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S09', 'KH17', 'CN03', 1890000000, 'TK36', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S10', 'KH18', 'CN02', 1320000000, 'TK1', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S11', 'KH19', 'CN01', 350000000, 'TK3', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S12', 'KH20', 'CN01', 730000000, 'TK6', TO_DATE('10/14/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S13', 'KH04', 'CN01', 1620000000, 'TK3', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S14', 'KH05', 'CN01', 2040000000, 'TK6', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S15', 'KH06', 'CN03', 1250000000, 'TK12', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S16', 'KH07', 'CN03', 1830000000, 'TK3', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S17', 'KH08', 'CN01', 1350000000, 'TK6', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S18', 'KH09', 'CN02', 670000000, 'TK12', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S19', 'KH10', 'CN03', 1210000000, 'TK24', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S20', 'KH11', 'CN04', 3010000000, 'TK36', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S21', 'KH12', 'CN05', 2420000000, 'TK1', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S22', 'KH13', 'CN02', 400000000, 'TK3', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S23', 'KH14', 'CN01', 1890000000, 'TK1', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S24', 'KH15', 'CN01', 1320000000, 'TK3', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S25', 'KH16', 'CN03', 350000000, 'TK6', TO_DATE('12/15/2018', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S26', 'KH05', 'CN03', 1320000000, 'TK3', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S27', 'KH06', 'CN03', 350000000, 'TK6', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S28', 'KH15', 'CN03', 730000000, 'TK12', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S29', 'KH16', 'CN01', 1620000000, 'TK3', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S30', 'KH17', 'CN01', 2040000000, 'TK6', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S31', 'KH18', 'CN01', 1250000000, 'TK12', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S32', 'KH19', 'CN01', 1830000000, 'TK24', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S33', 'KH20', 'CN01', 1350000000, 'TK6', TO_DATE('1/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S34', 'KH04', 'CN03', 670000000, 'TK3', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S35', 'KH05', 'CN04', 1210000000, 'TK6', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S36', 'KH06', 'CN05', 3010000000, 'TK12', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S37', 'KH07', 'CN05', 1210000000, 'TK3', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S38', 'KH08', 'CN05', 3010000000, 'TK6', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S39', 'KH09', 'CN05', 2420000000, 'TK12', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S40', 'KH17', 'CN04', 400000000, 'TK24', TO_DATE('2/9/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S41', 'KH07', 'CN04', 1890000000, 'TK36', TO_DATE('2/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S42', 'KH14', 'CN04', 1320000000, 'TK01', TO_DATE('2/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S43', 'KH17', 'CN02', 350000000, 'TK03', TO_DATE('2/20/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S44', 'KH04', 'CN02', 1320000000, 'TK01', TO_DATE('2/21/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S45', 'KH01', 'CN02', 350000000, 'TK03', TO_DATE('2/25/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S46', 'KH05', 'CN02', 730000000, 'TK06', TO_DATE('2/25/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S47', 'KH08', 'CN02', 1620000000, 'TK03', TO_DATE('2/25/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S48', 'KH16', 'CN03', 2040000000, 'TK00', TO_DATE('2/25/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S49', 'KH05', 'CN04', 3010000000, 'TK01', TO_DATE('3/8/2019', 'MM/DD/YYYY'), NULL, NULL);
+INSERT INTO Tiet_Kiem VALUES ('S50', 'KH10', 'CN05', 400000000, 'TK00', TO_DATE('3/8/2019', 'MM/DD/YYYY'), NULL, NULL);
+
+INSERT INTO Chi_Nhanh VALUES ('CN01', 'Hội sở chính ', 'Nguyễn Ngọc Lan');
+INSERT INTO Chi_Nhanh VALUES ('CN02', 'Chi nhánh Nam Hà Nội', 'Phan Thu Huệ');
+INSERT INTO Chi_Nhanh VALUES ('CN03', 'Chi nhánh Thành Công', 'Trương Mạnh Hải');
+INSERT INTO Chi_Nhanh VALUES ('CN04', 'Chi nhánh Hoàn Kiếm', 'Tô Thanh Long');
+INSERT INTO Chi_Nhanh VALUES ('CN05', 'Chi nhánh Tây Hồ', 'Mai Phúc Thành');
+
+INSERT INTO Ky_Han VALUES ('TK0', 'Không kỳ hạn', 0.30, '1 năm');
+INSERT INTO Ky_Han VALUES ('TK1', '01 tháng', 4.50, '1 năm');
+INSERT INTO Ky_Han VALUES ('TK3', '03 tháng', 5.00, '1 năm');
+INSERT INTO Ky_Han VALUES ('TK6', '06 tháng', 5.40, '1 năm');
+INSERT INTO Ky_Han VALUES ('TK12', '12 tháng', 6.30, '1 năm');
+INSERT INTO Ky_Han VALUES ('TK24', '24 tháng', 13.50, '2 năm');
+INSERT INTO Ky_Han VALUES ('TK36', '36 tháng', 20.00, '3 năm');
+
+
+CREATE OR REPLACE PROCEDURE TINH_LAI_TIET_KIEM AS
+BEGIN
+  FOR rec IN (
+    SELECT TK.MASO, TK.MAKH, TK.KYHAN, TK.SOTIEN, TK.NGAYGUI, 
+           NVL(TK.NGAYRUT, SYSDATE) AS NGAYRUT, KH.PHANLOAI, KH.EMAIL,
+           KH.SODIENTHOAI, KH.HOTEN,
+           KY.LAISUAT, KY.CHUKY
+    FROM Tiet_Kiem TK
+    JOIN Khach_Hang KH ON TK.MAKH = KH.MAKH
+    JOIN Ky_Han KY ON TK.KYHAN = KY.KYHAN
+    WHERE NVL(TK.NGAYRUT, SYSDATE) > TK.NGAYGUI
+  ) LOOP
+    DECLARE
+      T1 NUMBER := rec.SOTIEN * POWER(1 + rec.LAISUAT / 100, 
+                    (rec.NGAYRUT - rec.NGAYGUI) / rec.CHUKY);
+      T2 NUMBER := 0;
+      T3 NUMBER := 0;
+      M NUMBER := 0;
+    BEGIN
+      IF rec.KYHAN <> 'TK0' THEN
+        T2 := T1 * POWER(1 + rec.LAISUAT / 100, rec.CHUKY / 365);
+        T3 := T2 * POWER(1 + 0.003 / 365, 
+               (rec.NGAYRUT - ADD_MONTHS(rec.NGAYGUI, 12 * (rec.CHUKY / 12))) / 30);
+        M := T1 + T2 + T3;
+      ELSE
+        M := T1 * POWER(1 + 0.003 / 365, (rec.NGAYRUT - rec.NGAYGUI) / 30);
+      END IF;
+
+      INSERT INTO Tiet_Kiem_Lai (MASO, MAKH, NGAY_RUT, SO_TIEN_NHAN)
+      VALUES (rec.MASO, rec.MAKH, rec.NGAYRUT, M);
+
+      IF rec.PHANLOAI = 'VIP' THEN
+        -- Gửi email thông báo cho khách hàng VIP
+        NULL;
+      END IF;
+
+    EXCEPTION
+      WHEN OTHERS THEN
+        -- Ghi log lỗi
+        NULL;
+    END;
+  END LOOP;
+END;

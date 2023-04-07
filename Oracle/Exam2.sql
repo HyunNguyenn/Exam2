@@ -6,6 +6,7 @@ CREATE TABLE Khach_Hang (
     EMAIL VARCHAR2(50),
     PHANLOAI VARCHAR2(50)
 );
+
 CREATE TABLE Tiet_Kiem (
     MASO VARCHAR2(10)       PRIMARY KEY,
     MAKH VARCHAR2(10)       NOT NULL,
@@ -16,6 +17,7 @@ CREATE TABLE Tiet_Kiem (
     NGAYRUT DATE,
     SOTIENNHAN NUMBER(20, 2)
 );
+
 CREATE TABLE Chi_Nhanh (
     MA_CN VARCHAR2(10) PRIMARY KEY,
     TEN_CN VARCHAR2(50),
@@ -34,10 +36,10 @@ INSERT INTO Khach_Hang VALUES ('KH02', 'Nguy?n Thanh Tu?n', '101 Ð?i C? Vi?t - H
 INSERT INTO Khach_Hang VALUES ('KH03', 'Ph?m Th? Anh', 'C? Loa - Ðông Anh - Hà N?i', '01226930001', 'anhthe80@gmail.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH04', 'Nguy?n Th? Phuong Trà', '223 B?ch Mai - Hai Bà - Hà N?i', '0909123668', 'phuongtra_matnai@gmail.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH05', 'Lê Nh?t Hoàng Giang', '469 Gi?i Phóng - Hoàng Mai - Hà N?i', '0934691616', 'nhatgiang_n1@gmail.com', NULL);
-INSERT INTO Khach_Hang VALUES ('KH06', 'Hoàng Di?u Linh', '38 Ph? Hu? - Hai Bà - Hà N?i', '0913536666', 'hnl_daigia@yahoo.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH06', 'Hoàng Di?u Linh', '38  Ph? Hu? - Hai Bà - Hà N?i', '0913536666', 'hnl_daigia@yahoo.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH07', 'Phan Ðang Trúc', '115 Nguy?n Trãi - Thanh Xuân - Hà N?i', '01231584158', 'phandangtruc@gmail.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH08', 'H? H?i H?u', 'Phù L? - Ðông Anh - Hà N?i', '01229022001', 'bonghongxanh@gmail.com', NULL);
-INSERT INTO Khach_Hang VALUES ('KH09', 'Ph?m M?nh Hoàn', '195 B?ch Mai - Hai Bà - Hà N?i', '0901023668', 'hoanmp102@yahoo.com', NULL);
+INSERT INTO Khach_Hang VALUES ('KH09', 'Ph?m M?nh Hoàn', '195  B?ch Mai - Hai Bà - Hà N?i', '0901023668', 'hoanmp102@yahoo.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH10', 'Ngô Trúc Quân', '501 Gi?i Phóng - Hoàng Mai - Hà N?i', '0933344416', 'ngotrucquan.gp@gmail.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH11', 'Nguy?n H?u M?nh', '275 Ph? Hu? - Hai Bà - Hà N?i', '0913536618', 'manh 1248@gmail.com', NULL);
 INSERT INTO Khach_Hang VALUES ('KH12', 'Hoàng M?nh Khang', '195 Mai H?c Ð?- Hai Bà - Hà N?i', '0913246789', 'khangmanhhoang@gmail.com', NULL);
@@ -101,7 +103,7 @@ INSERT INTO Tiet_Kiem VALUES ('S48', 'KH16', 'CN03', 2040000000, 'TK00', TO_DATE
 INSERT INTO Tiet_Kiem VALUES ('S49', 'KH05', 'CN04', 3010000000, 'TK01', TO_DATE('3/8/2019', 'MM/DD/YYYY'), NULL, NULL);
 INSERT INTO Tiet_Kiem VALUES ('S50', 'KH10', 'CN05', 400000000, 'TK00', TO_DATE('3/8/2019', 'MM/DD/YYYY'), NULL, NULL);
 
-INSERT INTO Chi_Nhanh VALUES ('CN01', 'H?i s? chính', 'Nguy?n Ng?c Lan');
+INSERT INTO Chi_Nhanh VALUES ('CN01', 'H?i s? chính ', 'Nguy?n Ng?c Lan');
 INSERT INTO Chi_Nhanh VALUES ('CN02', 'Chi nhánh Nam Hà N?i', 'Phan Thu Hu?');
 INSERT INTO Chi_Nhanh VALUES ('CN03', 'Chi nhánh Thành Công', 'Truong M?nh H?i');
 INSERT INTO Chi_Nhanh VALUES ('CN04', 'Chi nhánh Hoàn Ki?m', 'Tô Thanh Long');
